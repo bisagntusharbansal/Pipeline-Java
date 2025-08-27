@@ -1,17 +1,15 @@
 pipeline {
     agent any
-
     stages {
-        stage("Compile") {
+        stage('Compile') {
             steps {
                 sh 'javac Test.java'
             }
         }
-        stage("run") {
+        stage('Run') {
             steps {
-                sh 'Java Test'
+                sh 'java Test'   
             }
         }
-        
     }
 }
